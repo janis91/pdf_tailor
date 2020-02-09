@@ -1,0 +1,33 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#f8cc84",
+        "activityBar.activeBorder": "#099761",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#099761",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "titleBar.activeBackground": "#f5b854",
+        "titleBar.inactiveBackground": "#f5b85499",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveForeground": "#15202b99",
+        "statusBar.background": "#f5b854",
+        "statusBarItem.hoverBackground": "#f2a424",
+        "statusBar.foreground": "#15202b"
+    },
+    "peacock.affectStatusBar": true,
+    "peacock.color": "#f5b854",
+    "eslint.format.enable": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "vetur.format.defaultFormatter.ts": "none",
+    "vetur.experimental.templateInterpolationService": true,
+    "typescript.tsdk": "node_modules/typescript/lib"
+}
