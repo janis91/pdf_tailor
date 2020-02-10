@@ -8,6 +8,7 @@
  * @author Janis Koehr <janiskoehr@icloud.com>
  * @copyright Janis Koehr 2020
  */
-namespace OCA\Tailor\AppInfo;
+namespace OCA\Tailor\Tests\Unit;
 
-$app = new Application();
+
+abstract class TestCase extends \PHPUnit\Framework\TestCase {}
