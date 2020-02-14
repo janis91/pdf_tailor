@@ -7,7 +7,7 @@ export class OcaService {
         actionHandler,
         altText: Translations.TRANSLATION_TAILOR,
         displayName: Translations.TRANSLATION_TAILOR,
-        iconClass: 'icon-ocr',
+        iconClass: 'icon-pdf-tailor',
         mime: 'image',
         name: 'Ocr',
         order: 100,
@@ -26,7 +26,7 @@ export class OcaService {
       OCA.Files.App.fileList.multiSelectMenuItems.push({
         action: handler,
         displayName: Translations.TRANSLATION_TAILOR,
-        iconClass: 'icon-ocr',
+        iconClass: 'icon-pdf-tailor',
         name: 'ocr'
       })
       OCA.Files.App.fileList.fileMultiSelectMenu.render(OCA.Files.App.fileList.multiSelectMenuItems)
