@@ -1,5 +1,4 @@
-dist: trusty
-sudo: required
+os: linux
 language: php
 php:
 - 7.2
@@ -8,7 +7,7 @@ env:
   global:
   - CORE_BRANCH=stable18
   - APP_NAME=pdf_tailor
-  matrix:
+  jobs:
   - DB=sqlite
 branches:
   only:
@@ -20,10 +19,13 @@ stages:
 - name: release
   if: NOT type IN (pull_request)
 before_install:
-- wget https://raw.githubusercontent.com/nextcloud/travis_ci/master/before_install.sh
-- ". ./before_install.sh $APP_NAME $CORE_BRANCH $DB"
+- sudo apt-get -y install jq
+- curl -Ls -o codacy-coverage-reporter "$(curl -Ls https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r '.assets | map({name, browser_download_url} | select(.name | contains("codacy-coverage-reporter-linux"))) | .[0].browser_download_url')"
+- chmod +x codacy-coverage-reporter
 - nvm install 12
 - nvm use 12
+- wget https://raw.githubusercontent.com/nextcloud/travis_ci/master/before_install.sh
+- ". ./before_install.sh $APP_NAME $CORE_BRANCH $DB"
 - cd ../server
 - "./occ check"
 - "./occ status"
@@ -47,7 +49,7 @@ script:
 - echo "Running JavaScript/TypeScript Unit Tests"
 - npm run lint && npm run test && npm run build
 - echo "Sending Test Coverage to Codacy"
-- npm run coverage
+- "./codacy-coverage-reporter report -l typescript -r tests/js/coverage/lcov.info"
 - cd ..
 jobs:
   include:
@@ -78,7 +80,7 @@ jobs:
       provider: releases
       skip_cleanup: true
 	  overwrite: true
-      api_key:
+      token:
     	secure: G2ddgkevKIMhgF+YJFkLxPJAwX8S0Y4+YtzAOBBG6eBpXCkBiq3/rkGehOLmz9Rss3i477jbC/2Y+rpR1W4TXWQmflqjQgAoVPVC7RhUdZ2rdOQsy34A5F+fy/cgRQx/TLfA7wy0AAIQK8wkuWmlRQ3SweQGMmv0BEdO+NZGHIp3H01xO0S0uGArT+ikrooP4V1pOfJJQf03ZqCtZg6rEcuvybrLPXS3Fy/0mAdsxejHit8QQvodiim6PT+23K0ACqPC3d1clUmMkY+wsvOe8HHDKNtlWJA4Djh7zlUeIba8gaH2S+0X7+yp2d6N7OIuek8re0us85ZalQK8e10hm4wvd1bzwbxAKcJI0+xroIdWw6SEu30vW9a03P43zVMzG83SoHmZjFGyDIbGikSpS4B6p4Wbk3iKRjNrHnqZd2aOA/eFfcKRGtNFpIXEMg1FkZd3bI7awCV05l7zQ2d0HOACd+JGqpBSDHS9NVgEBBU2NqXb67rCDFP8/TRxiBRW1PphUuU+mTjl0ae6wsbOm9PCPI4E66AXdb5Al0Gsm4ZC4N8GhJcYXrqHWVDW8xrDTX+EPdoN69ZcpA1bWuWpr4MOxoVYDGiGirZZ2XC0h6j4XaJAIFEzaHGr7rO6BphZLWM0l+dvdboqD63Ds31uADfD8Kp3l0txBFd1+uq6S6I=
       file: pdf_tailor.tar.gz
       on:
