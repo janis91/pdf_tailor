@@ -1,0 +1,5 @@
+{ "translations": {
+    "Target file already exists:" : "Kohdetiedosto on jo olemassa:",
+    "MIME type not supported." : "MIME-tyyppi ei ole tuettu."
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
