@@ -25,8 +25,8 @@ describe('OcaService', () => {
         altText: 'PDF Tailor',
         displayName: 'PDF Tailor',
         iconClass: 'icon-pdf-tailor',
-        mime: 'image',
-        name: 'Ocr',
+        mime: 'application/pdf',
+        name: 'Tailor',
         order: 100,
         permissions: 2
       })
@@ -59,12 +59,12 @@ describe('OcaService', () => {
         action: handler,
         displayName: 'PDF Tailor',
         iconClass: 'icon-pdf-tailor',
-        name: 'ocr'
+        name: 'tailor'
       }])
       expect(OCA.Files.App.fileList.fileMultiSelectMenu.render).toHaveBeenCalledWith(OCA.Files.App.fileList.multiSelectMenuItems)
     })
 
-    it('GIVEN ocr menu item has not been registered yet, WHEN registerMultiSelectMenuItem is called with a handler function, THEN registers a new multi select menu item with the handler function.', () => {
+    it('GIVEN tailor menu item has not been registered yet, WHEN registerMultiSelectMenuItem is called with a handler function, THEN registers a new multi select menu item with the handler function.', () => {
       const existingItem = {
         action: () => 'cool',
         displayName: 'DELETE',
@@ -81,17 +81,17 @@ describe('OcaService', () => {
         action: handler,
         displayName: 'PDF Tailor',
         iconClass: 'icon-pdf-tailor',
-        name: 'ocr'
+        name: 'tailor'
       }])
       expect(OCA.Files.App.fileList.fileMultiSelectMenu.render).toHaveBeenCalledWith(OCA.Files.App.fileList.multiSelectMenuItems)
     })
 
-    it('GIVEN ocr menu item has been registered already, WHEN registerMultiSelectMenuItem is called with a handler function, THEN registers no new multi select menu item.', () => {
+    it('GIVEN tailor menu item has been registered already, WHEN registerMultiSelectMenuItem is called with a handler function, THEN registers no new multi select menu item.', () => {
       const existingItem = {
         action: () => 'already registered',
         displayName: 'PDF Tailor',
         iconClass: 'icon-pdf-tailor',
-        name: 'ocr'
+        name: 'tailor'
       }
       OCA.Files.App.fileList.multiSelectMenuItems.push(existingItem)
       const handler = () => 'test'
@@ -111,7 +111,7 @@ describe('OcaService', () => {
       expect(OCA.Files.App.fileList.fileMultiSelectMenu.render).not.toHaveBeenCalled()
     })
 
-    it('GIVEN ocr menu item has not been registered yet, WHEN unregisterMultiSelectMenuItem is called, THEN returns.', () => {
+    it('GIVEN tailor menu item has not been registered yet, WHEN unregisterMultiSelectMenuItem is called, THEN returns.', () => {
       const existingItem = {
         action: () => 'cool',
         displayName: 'DELETE',
@@ -126,12 +126,12 @@ describe('OcaService', () => {
       expect(OCA.Files.App.fileList.fileMultiSelectMenu.render).not.toHaveBeenCalled()
     })
 
-    it('GIVEN ocr menu item has been registered, WHEN unregisterMultiSelectMenuItem is called, THEN deletes multi select menu item from items and calls render.', () => {
+    it('GIVEN tailor menu item has been registered, WHEN unregisterMultiSelectMenuItem is called, THEN deletes multi select menu item from items and calls render.', () => {
       const existingItem = {
         action: () => 'already registered',
         displayName: 'PDF Tailor',
         iconClass: 'icon-pdf-tailor',
-        name: 'ocr'
+        name: 'tailor'
       }
       OCA.Files.App.fileList.multiSelectMenuItems.push(existingItem);
       (OCA.Files.App.fileList.fileMultiSelectMenu.render as jest.Mock).mockReturnValueOnce(undefined)
@@ -142,12 +142,12 @@ describe('OcaService', () => {
       expect(OCA.Files.App.fileList.fileMultiSelectMenu.render).toHaveBeenCalledWith(OCA.Files.App.fileList.multiSelectMenuItems)
     })
 
-    it('GIVEN ocr menu item has been registered in addition to another one, WHEN unregisterMultiSelectMenuItem is called, THEN deletes multi select menu item from items and calls render.', () => {
+    it('GIVEN tailor menu item has been registered in addition to another one, WHEN unregisterMultiSelectMenuItem is called, THEN deletes multi select menu item from items and calls render.', () => {
       const existingItem = {
         action: () => 'already registered',
         displayName: 'PDF Tailor',
         iconClass: 'icon-pdf-tailor',
-        name: 'ocr'
+        name: 'tailor'
       }
       const otherItem = {
         action: () => 'cool',

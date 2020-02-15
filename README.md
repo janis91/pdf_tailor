@@ -3,7 +3,7 @@
 
 <img align="left" src="screenshots/app.png" height="100">
 
-PDF Tailor does things
+PDF Tailor gives you the possibility to split, merge, etc. your PDF files directly in Nextcloud.
 
 ## Prerequisites, Requirements and Dependencies
 The app has some prerequisites:
@@ -11,7 +11,7 @@ The app has some prerequisites:
  - Only supported on latest modern web browsers (Chrome, Edge, Firefox, Opera, Safari)
 
 ## Installation
-Install the app from the [Nextcloud AppStore](http://apps.nextcloud.com) or download the release package from github (**NOT** the sources) and place the content in **nextcloud/apps/pdf_tailor/**.
+Install the app from the [Nextcloud AppStore](https://apps.nextcloud.com/apps/pdf_tailor) or download the release package from github (**NOT** the sources) and place the content in **nextcloud/apps/pdf_tailor/**.
 
 ## Disclaimer
 The software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
