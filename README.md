@@ -16,3 +16,6 @@ Install the app from the [Nextcloud AppStore](https://apps.nextcloud.com/apps/pd
 ## Disclaimer
 The software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
 CONDITIONS OF ANY KIND, either express or implied.
+
+## Credtis
+Icons made by [Smashicons](https://www.flaticon.com/authors/smashicons) and [Freepik](https://www.flaticon.com/authors/freepik) from [https://www.flaticon.com/](www.flaticon.com)

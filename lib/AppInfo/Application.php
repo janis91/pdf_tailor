@@ -36,9 +36,8 @@ class Application extends App {
 		 */
 		$eventDispatcher = \OC::$server->getEventDispatcher();
 		$eventDispatcher->addListener('OCA\Files::loadAdditionalScripts', function () {
-			script(TailorConstants::APP_NAME, "chunk-app-vendors");
+			script(TailorConstants::APP_NAME, "chunk-vendors");
 			script(TailorConstants::APP_NAME, "app");
-			style(TailorConstants::APP_NAME, "chunk-app-vendors");
 			style(TailorConstants::APP_NAME, "app");
 		});
 		/**
