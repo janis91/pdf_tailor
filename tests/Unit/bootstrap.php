@@ -9,14 +9,4 @@
  * @copyright Copyright (c) 2016, Joas Schilling <coding@schilljs.com>
  * @copyright Janis Koehr 2020
  */
-if (!defined('PHPUNIT_RUN')) {
-    define('PHPUNIT_RUN', 1);
-}
-require_once __DIR__ . '/../../../../lib/base.php';
-
-if (!class_exists('\PHPUnit\Framework\TestCase')) {
-    require_once ('PHPUnit/Autoload.php');
-}
-
-\OC_App::loadApp('pdf_tailor');
-OC_Hook::clear();
+require_once __DIR__ . '/../../../../tests/bootstrap.php';

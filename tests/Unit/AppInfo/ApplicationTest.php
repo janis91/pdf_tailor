@@ -11,7 +11,7 @@
 namespace OCA\Tailor\Tests\Unit\AppInfo;
 
 use OCA\Tailor\AppInfo\Application;
-use OCA\Tailor\Tests\Unit\TestCase;
+use PHPUnit\Framework\TestCase;
 use OCP\AppFramework\IAppContainer;
 
 
@@ -28,11 +28,16 @@ class ApplicationTest extends TestCase {
     /** @var IAppContainer */
     protected $container;
 
-    protected function setUp() {
-        parent::setUp();
-        $this->app = new Application();
-        $this->container = $this->app->getContainer();
-    }
+	public function setUp(): void {
+		parent::setUp();
+		$this->app = new Application();
+		$this->container = $this->app->getContainer();
+	}
+
+	public function testAppInstalled() {
+		$appManager = $this->container->query('OCP\App\IAppManager');
+		$this->assertTrue($appManager->isInstalled('pdf_tailor'));
+	}
 
     public function testContainerAppName() {
         $this->app = new Application();

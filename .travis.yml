@@ -78,7 +78,7 @@ jobs:
     - rm -rf pdf_tailor/
     deploy:
       provider: releases
-      cleanup: false
+      skip_cleanup: true
       overwrite: true
       token:
         secure: G2ddgkevKIMhgF+YJFkLxPJAwX8S0Y4+YtzAOBBG6eBpXCkBiq3/rkGehOLmz9Rss3i477jbC/2Y+rpR1W4TXWQmflqjQgAoVPVC7RhUdZ2rdOQsy34A5F+fy/cgRQx/TLfA7wy0AAIQK8wkuWmlRQ3SweQGMmv0BEdO+NZGHIp3H01xO0S0uGArT+ikrooP4V1pOfJJQf03ZqCtZg6rEcuvybrLPXS3Fy/0mAdsxejHit8QQvodiim6PT+23K0ACqPC3d1clUmMkY+wsvOe8HHDKNtlWJA4Djh7zlUeIba8gaH2S+0X7+yp2d6N7OIuek8re0us85ZalQK8e10hm4wvd1bzwbxAKcJI0+xroIdWw6SEu30vW9a03P43zVMzG83SoHmZjFGyDIbGikSpS4B6p4Wbk3iKRjNrHnqZd2aOA/eFfcKRGtNFpIXEMg1FkZd3bI7awCV05l7zQ2d0HOACd+JGqpBSDHS9NVgEBBU2NqXb67rCDFP8/TRxiBRW1PphUuU+mTjl0ae6wsbOm9PCPI4E66AXdb5Al0Gsm4ZC4N8GhJcYXrqHWVDW8xrDTX+EPdoN69ZcpA1bWuWpr4MOxoVYDGiGirZZ2XC0h6j4XaJAIFEzaHGr7rO6BphZLWM0l+dvdboqD63Ds31uADfD8Kp3l0txBFd1+uq6S6I=
