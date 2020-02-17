@@ -1,0 +1,5 @@
+{ "translations": {
+    "PDF editing" : "PDF խմբագրում",
+    "_%n file_::_%n files_" : ["%n ֆայլ","%n ֆայլ"]
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
