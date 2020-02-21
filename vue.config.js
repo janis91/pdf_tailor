@@ -5,7 +5,7 @@ module.exports = {
 
   pages: {
     app: {
-      entry: 'src/app/main.ts',
+      entry: 'src/app/main.ts'
     }
   },
 
