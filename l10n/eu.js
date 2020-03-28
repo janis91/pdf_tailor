@@ -1,7 +1,14 @@
 OC.L10N.register(
     "pdf_tailor",
     {
+    "PDF Tailor" : "PDF Tailor",
+    "PDF editing" : "PDF edizioa",
+    "# Description\n\nPDF Tailor does things\n\n## Prerequisites, Requirements and Dependencies\nThe OCR app has some prerequisites:\n\n - [Nextcloud 18 and up](https://nextcloud.com/)\n\n - Only supported on latest modern web browsers (Chrome, Edge, Firefox, Opera, Safari)\n\n## Installation\nInstall the app from the [Nextcloud AppStore](http://apps.nextcloud.com) or download the release package from github (**NOT** the sources) and place the content in **nextcloud/apps/ocr/**.\n\n## Disclaimer\nThe software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR\nCONDITIONS OF ANY KIND, either express or implied." : "# Deskribapena\n\nPDF Tailor-ek gauzak egiten ditu\n\n## Aurrebaldintzak, baldintzak eta menpekotasunak\nOCR aplikazioak aurrebaldintza batzuk eskatzen ditu:\n\n - [Nextcloud 18 edo handiagoa](https://nextcloud.com/)\n\n - Internet nabigatzaile berria (Chrome, Edge, Firefox, Opera, Safari)\n\n## Instalazioa\nAplikazioa [Nextcloud Dendatik](http://apps.nextcloud.com) instalatu edo deskargatu azken paketea githubetik (iturburu kodea **EZ**) eta kopiatu edukia **nextcloud/apps/ocr/** karpetan.\n\n## Bermerik eza\nSoftware hau \"BERE HORRETAN\" banatzen da, INOLAKO BERME EDO BALDINTZARIK GABE, berdin da hauek esplizituak edo inplizituak izan.",
     "Target file already exists:" : "Helburuko fitxategia lehendik dago:",
-    "MIME type not supported." : "MIME mota ez da onartzen."
+    "Tailor processing failed:" : "Tailor prozesamenduak huts egin du:",
+    "MIME type not supported." : "MIME mota ez da onartzen.",
+    "An unexpected error occured during the upload of the processed file." : "Errorea gertatu da prozesatu den fitxategia kargatzean.",
+    "An unexpected error occured during the deletion of the original file." : "Errorea gertatu da jatorrizko fitxategia ezabatzean.",
+    "_%n file_::_%n files_" : ["Fitxategi %n","%n fitxategi"]
 },
 "nplurals=2; plural=(n != 1);");
