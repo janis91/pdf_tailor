@@ -1,7 +1,13 @@
 OC.L10N.register(
     "pdf_tailor",
     {
+    "PDF Tailor" : "PDF Tailor",
+    "PDF editing" : "PDF-breytingar",
+    "Target file already exists:" : "Úttaksskrá er þegar til staðar:",
+    "Tailor processing failed:" : "Vinnsla Tailor mistókst:",
     "MIME type not supported." : "MIME-tegund ekki studd.",
-    "An unexpected error occured during the deletion of the original file." : "Villa kom upp við að eyða upprunalegu skránni"
+    "An unexpected error occured during the upload of the processed file." : "Óvænt villa kom upp við að senda inn unna skrá.",
+    "An unexpected error occured during the deletion of the original file." : "Villa kom upp við að eyða upprunalegu skránni",
+    "_%n file_::_%n files_" : ["%n skrá","%n skrár"]
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");
