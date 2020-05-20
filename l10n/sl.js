@@ -1,6 +1,7 @@
 OC.L10N.register(
     "pdf_tailor",
     {
+    "PDF editing" : "Urejanje PDF",
     "Target file already exists:" : "Ciljna datoteka že obstaja:",
     "MIME type not supported." : "Vrsta MIME ni podprta.",
     "An unexpected error occured during the upload of the processed file." : "Med pošiljanjem obdelovane datoteke je prišlo do nepričakovane napake.",
