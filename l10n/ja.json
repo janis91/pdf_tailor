@@ -1,5 +1,9 @@
 { "translations": {
-    "Target file already exists:" : "目標ファイルは既に存在します。",
+    "PDF Tailor" : "PDF テーラー",
+    "PDF editing" : "PDF編集",
+    "# Description\n\nPDF Tailor does things\n\n## Prerequisites, Requirements and Dependencies\nThe OCR app has some prerequisites:\n\n - [Nextcloud 18 and up](https://nextcloud.com/)\n\n - Only supported on latest modern web browsers (Chrome, Edge, Firefox, Opera, Safari)\n\n## Installation\nInstall the app from the [Nextcloud AppStore](http://apps.nextcloud.com) or download the release package from github (**NOT** the sources) and place the content in **nextcloud/apps/ocr/**.\n\n## Disclaimer\nThe software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR\nCONDITIONS OF ANY KIND, either express or implied." : "# 詳細説明\n\nPDFテーラーでできること\n\n## 前提条件、要件、および依存関係\nOCRアプリにはいくつかの前提条件があります：\n\n - [Nextcloud 18 and up](https://nextcloud.com/)\n\n-最新の最新のWebブラウザ（Chrome、Edge、Firefox、Opera、Safari）でのみサポートされています\n\n## インストール\n[Nextcloud AppStore](http://apps.nextcloud.com) からアプリをインストールするか、githubからリリースパッケージをダウンロードして(ソースでは**なく**)、コンテンツを** nextcloud/apps/ocr/** に配置します。\n\n## 免責事項\n本ソフトウェアは、明示的にも黙示的にも、いかなる種類の保証も条件もなく「そのまま」の状態で配布されます",
+    "Target file already exists:" : "テーラーの目標ファイルは既に存在します。",
+    "Tailor processing failed:" : "テーラーが処理できませんでした：",
     "MIME type not supported." : "MIMEタイプは対応していません",
     "An unexpected error occured during the upload of the processed file." : "処理済みファイルのアップロード中に予期しないエラーが発生しました",
     "An unexpected error occured during the deletion of the original file." : "元ファイルの削除中に予期しないエラーが発生しました"
