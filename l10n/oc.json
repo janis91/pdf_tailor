@@ -1,0 +1,5 @@
+{ "translations": {
+    "PDF editing" : "Modificacion PDF",
+    "_%n file_::_%n files_" : ["%n fichièr","%n fichièrs"]
+},"pluralForm" :"nplurals=2; plural=(n > 1);"
+}
