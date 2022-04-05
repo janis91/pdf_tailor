@@ -11,4 +11,4 @@ OC.L10N.register(
     "An unexpected error occured during the deletion of the original file." : "Une erreur inattendue est survenue lors de la suppression du fichier original.",
     "_%n file_::_%n files_" : ["%n fichier","%n fichiers"]
 },
-"nplurals=2; plural=(n > 1);");
+"nplurals=3; plural=(n==0 || n==1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
