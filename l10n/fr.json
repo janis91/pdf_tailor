@@ -8,5 +8,5 @@
     "An unexpected error occured during the upload of the processed file." : "Une erreur inattendue est survenue durant le téléversement du fichier traité.",
     "An unexpected error occured during the deletion of the original file." : "Une erreur inattendue est survenue lors de la suppression du fichier original.",
     "_%n file_::_%n files_" : ["%n fichier","%n fichiers"]
-},"pluralForm" :"nplurals=3; plural=(n==0 || n==1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
+},"pluralForm" :"nplurals=2; plural=(n > 1);"
 }
