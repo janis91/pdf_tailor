@@ -9,6 +9,6 @@ OC.L10N.register(
     "MIME type not supported." : "Tipo MIME non supportato.",
     "An unexpected error occured during the upload of the processed file." : "Si è verificato un errore inatteso durante il caricamento del file elaborato.",
     "An unexpected error occured during the deletion of the original file." : "Si è verificato un errore inatteso durante l'eliminazione del file originale.",
-    "_%n file_::_%n files_" : ["%n file","%n file"]
+    "_%n file_::_%n files_" : ["%n file","%n file","%n file"]
 },
-"nplurals=2; plural=(n != 1);");
+"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
