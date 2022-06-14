@@ -6,6 +6,7 @@
     "Tailor processing failed:" : "テーラーが処理できませんでした：",
     "MIME type not supported." : "MIMEタイプは対応していません",
     "An unexpected error occured during the upload of the processed file." : "処理済みファイルのアップロード中に予期しないエラーが発生しました",
-    "An unexpected error occured during the deletion of the original file." : "元ファイルの削除中に予期しないエラーが発生しました"
+    "An unexpected error occured during the deletion of the original file." : "元ファイルの削除中に予期しないエラーが発生しました",
+    "_%n file_::_%n files_" : ["%n ファイル"]
 },"pluralForm" :"nplurals=1; plural=0;"
 }
