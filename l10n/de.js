@@ -7,8 +7,8 @@ OC.L10N.register(
     "Target file already exists:" : "Zieldatei bereits vorhanden:",
     "Tailor processing failed:" : "Teilen-Verarbeitung fehlgeschlagen:",
     "MIME type not supported." : "MIME-Typ nicht unterstützt.",
-    "An unexpected error occured during the upload of the processed file." : "Ein unerwarteter Fehler trat während des Hochladens der verarbeiteten Datei auf.",
-    "An unexpected error occured during the deletion of the original file." : "Beim Löschen der Originaldatei ist ein unerwarteter Fehler aufgetreten.",
+    "An unexpected error occured during the upload of the processed file." : "Es ist ein unerwarteter Fehler beim Hochladen der verarbeiteten Datei aufgetreten.",
+    "An unexpected error occured during the deletion of the original file." : "Es ist ein unerwarteter Fehler beim Löschen der Originaldatei aufgetreten.",
     "_%n file_::_%n files_" : ["%n Datei","%n Dateien"]
 },
 "nplurals=2; plural=(n != 1);");
