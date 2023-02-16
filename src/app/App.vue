@@ -36,10 +36,10 @@ export default Vue.extend({
 </script>
 
 <style>
-.icon-tailor {
+.icon-pdf-tailor {
     background-image: url('../img/icon/tailor.svg');
 }
-.dark .icon-tailor {
+.dark .icon-pdf-tailor {
     filter: invert(100%);
 }
 </style>
