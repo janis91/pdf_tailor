@@ -1,6 +1,7 @@
 OC.L10N.register(
     "pdf_tailor",
     {
+    "PDF editing" : "ویرایش PDF",
     "Target file already exists:" : "پرونده هدف از قبل موجود است:",
     "MIME type not supported." : "نوع MIME پشتیبانی نمی شود.",
     "An unexpected error occured during the upload of the processed file." : "هنگام آپلود پرونده پردازش شده ، یک خطای غیرمنتظره رخ داده است.",
