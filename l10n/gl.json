@@ -5,8 +5,8 @@
     "Target file already exists:" : "O ficheiro destino xa existe:",
     "Tailor processing failed:" : "Produciuse un fallo no procesamento co Tailor:",
     "MIME type not supported." : "Tipo MIME non admitido.",
-    "An unexpected error occured during the upload of the processed file." : "Produciuse un erro inesperado durante a carga do ficheiro procesado.",
-    "An unexpected error occured during the deletion of the original file." : "Produciuse un erro inesperado durante a eliminación do ficheiro orixinal.",
+    "An unexpected error occured during the upload of the processed file." : "Produciuse un erro non agardado durante o envío do ficheiro procesado.",
+    "An unexpected error occured during the deletion of the original file." : "Produciuse un erro non agardado durante a eliminación do ficheiro orixinal.",
     "_%n file_::_%n files_" : ["%n ficheiro","%n ficheiros"]
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
