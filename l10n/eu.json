@@ -5,7 +5,7 @@
     "Target file already exists:" : "Helburuko fitxategia lehendik dago:",
     "Tailor processing failed:" : "Tailor prozesamenduak huts egin du:",
     "MIME type not supported." : "MIME mota ez da onartzen.",
-    "An unexpected error occured during the upload of the processed file." : "Errorea gertatu da prozesatu den fitxategia kargatzean.",
+    "An unexpected error occured during the upload of the processed file." : "Errorea gertatu da prozesatu den fitxategia igotzean.",
     "An unexpected error occured during the deletion of the original file." : "Errorea gertatu da jatorrizko fitxategia ezabatzean.",
     "_%n file_::_%n files_" : ["Fitxategi %n","%n fitxategi"]
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
