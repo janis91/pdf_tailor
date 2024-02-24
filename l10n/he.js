@@ -9,6 +9,6 @@ OC.L10N.register(
     "MIME type not supported." : "סוג ה־MIME לא נתמך.",
     "An unexpected error occured during the upload of the processed file." : "אירעה שגיאה במהלך העלאת הקובץ המעובד.",
     "An unexpected error occured during the deletion of the original file." : "אירעה שגיאה בלתי צפויה במהלך מחיקת הקובץ המקורי.",
-    "_%n file_::_%n files_" : ["קובץ אחד","%n קבצים","%n קבצים","%n קבצים"]
+    "_%n file_::_%n files_" : ["קובץ אחד","%n קבצים","%n קבצים"]
 },
-"nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;");
+"nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;");
