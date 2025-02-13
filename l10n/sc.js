@@ -9,6 +9,6 @@ OC.L10N.register(
     "MIME type not supported." : "Tipu de MIME non suportadu.",
     "An unexpected error occured during the upload of the processed file." : "Ddoe est istètiu un'errore carrighende su documentu.",
     "An unexpected error occured during the deletion of the original file." : "Ddoe est istètiu un'errore cantzellende su documentu.",
-    "_%n file_::_%n files_" : ["%n archìviu","%n archìviu"]
+    "_%n file_::_%n files_" : ["%n archìviu","%n archìvios"]
 },
 "nplurals=2; plural=(n != 1);");
