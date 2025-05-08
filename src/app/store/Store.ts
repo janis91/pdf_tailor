@@ -8,8 +8,14 @@ export const STOP_PROCESS_AND_RESET_MODAL_STATE = 'STOP_PROCESS_AND_RESET_MODAL_
 export const SET_SELECTED_FILES = 'SET_SELECTED_FILES'
 export const CLEAR_SELECTED_FILES = 'CLEAR_SELECTED_FILES'
 
+interface Page {
+  number: number;
+  file: OCAFile;
+}
+
 export interface State {
   selectedFiles: OCAFile[];
+  selectedPages: Page[];
   showModal: boolean;
   processing: boolean;
 }
@@ -18,6 +24,7 @@ export default {
   strict: true,
   state: {
     selectedFiles: [],
+    selectedPages: [],
     showModal: false,
     processing: false
   },
@@ -42,7 +49,7 @@ export default {
     }
   },
   actions: {
-    [STOP_PROCESS_AND_RESET_MODAL_STATE]({ commit, state }) {
+    [STOP_PROCESS_AND_RESET_MODAL_STATE]({ commit }) {
       commit(SET_FINISHED)
       commit(HIDE_MODAL)
     }

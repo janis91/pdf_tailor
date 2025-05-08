@@ -25,8 +25,8 @@ describe('OcaService', () => {
         altText: 'PDF Tailor',
         displayName: 'PDF Tailor',
         iconClass: 'icon-pdf-tailor',
-        mime: 'image',
-        name: 'Ocr',
+        mime: 'application/pdf',
+        name: 'Tailor',
         order: 100,
         permissions: 2
       })
@@ -59,12 +59,12 @@ describe('OcaService', () => {
         action: handler,
         displayName: 'PDF Tailor',
         iconClass: 'icon-pdf-tailor',
-        name: 'ocr'
+        name: 'tailor'
       }])
       expect(OCA.Files.App.fileList.fileMultiSelectMenu.render).toHaveBeenCalledWith(OCA.Files.App.fileList.multiSelectMenuItems)
     })
 
-    it('GIVEN ocr menu item has not been registered yet, WHEN registerMultiSelectMenuItem is called with a handler function, THEN registers a new multi select menu item with the handler function.', () => {
+    it('GIVEN tailor menu item has not been registered yet, WHEN registerMultiSelectMenuItem is called with a handler function, THEN registers a new multi select menu item with the handler function.', () => {
       const existingItem = {
         action: () => 'cool',
         displayName: 'DELETE',
@@ -81,17 +81,17 @@ describe('OcaService', () => {
         action: handler,
         displayName: 'PDF Tailor',
         iconClass: 'icon-pdf-tailor',
-        name: 'ocr'
+        name: 'tailor'
       }])
       expect(OCA.Files.App.fileList.fileMultiSelectMenu.render).toHaveBeenCalledWith(OCA.Files.App.fileList.multiSelectMenuItems)
     })
 
-    it('GIVEN ocr menu item has been registered already, WHEN registerMultiSelectMenuItem is called with a handler function, THEN registers no new multi select menu item.', () => {
+    it('GIVEN tailor menu item has been registered already, WHEN registerMultiSelectMenuItem is called with a handler function, THEN registers no new multi select menu item.', () => {
       const existingItem = {
         action: () => 'already registered',
         displayName: 'PDF Tailor',
         iconClass: 'icon-pdf-tailor',
-        name: 'ocr'
+        name: 'tailor'
       }
       OCA.Files.App.fileList.multiSelectMenuItems.push(existingItem)
       const handler = () => 'test'
@@ -111,7 +111,7 @@ describe('OcaService', () => {
       expect(OCA.Files.App.fileList.fileMultiSelectMenu.render).not.toHaveBeenCalled()
     })
 
-    it('GIVEN ocr menu item has not been registered yet, WHEN unregisterMultiSelectMenuItem is called, THEN returns.', () => {
+    it('GIVEN tailor menu item has not been registered yet, WHEN unregisterMultiSelectMenuItem is called, THEN returns.', () => {
       const existingItem = {
         action: () => 'cool',
         displayName: 'DELETE',
@@ -126,12 +126,12 @@ describe('OcaService', () => {
       expect(OCA.Files.App.fileList.fileMultiSelectMenu.render).not.toHaveBeenCalled()
     })
 
-    it('GIVEN ocr menu item has been registered, WHEN unregisterMultiSelectMenuItem is called, THEN deletes multi select menu item from items and calls render.', () => {
+    it('GIVEN tailor menu item has been registered, WHEN unregisterMultiSelectMenuItem is called, THEN deletes multi select menu item from items and calls render.', () => {
       const existingItem = {
         action: () => 'already registered',
         displayName: 'PDF Tailor',
         iconClass: 'icon-pdf-tailor',
-        name: 'ocr'
+        name: 'tailor'
       }
       OCA.Files.App.fileList.multiSelectMenuItems.push(existingItem);
       (OCA.Files.App.fileList.fileMultiSelectMenu.render as jest.Mock).mockReturnValueOnce(undefined)
@@ -142,12 +142,12 @@ describe('OcaService', () => {
       expect(OCA.Files.App.fileList.fileMultiSelectMenu.render).toHaveBeenCalledWith(OCA.Files.App.fileList.multiSelectMenuItems)
     })
 
-    it('GIVEN ocr menu item has been registered in addition to another one, WHEN unregisterMultiSelectMenuItem is called, THEN deletes multi select menu item from items and calls render.', () => {
+    it('GIVEN tailor menu item has been registered in addition to another one, WHEN unregisterMultiSelectMenuItem is called, THEN deletes multi select menu item from items and calls render.', () => {
       const existingItem = {
         action: () => 'already registered',
         displayName: 'PDF Tailor',
         iconClass: 'icon-pdf-tailor',
-        name: 'ocr'
+        name: 'tailor'
       }
       const otherItem = {
         action: () => 'cool',
@@ -193,7 +193,7 @@ describe('OcaService', () => {
 
   describe('putFileContents()', () => {
     it('GIVEN successful put AND addAndFetch, WHEN putFileContents is called with path = "/test.pdf" AND valid body, THEN resolves.', async () => {
-      const jqPromise = { done: (cb: () => void) => { cb(); return jqPromise }, fail: (cb: () => void) => jqPromise };
+      const jqPromise = { done: (cb: () => void) => { cb(); return jqPromise }, fail: (_cb: () => void) => jqPromise };
       (OCA.Files.App.fileList.filesClient.putFileContents as jest.Mock).mockReturnValueOnce(jqPromise);
       (OCA.Files.App.fileList.addAndFetchFileInfo as jest.Mock).mockReturnValueOnce(jqPromise)
       const body = new Uint8Array()
@@ -206,8 +206,8 @@ describe('OcaService', () => {
 
     it('GIVEN successful put AND unsuccessful addAndFetch, WHEN putFileContents is called with path = "/test.pdf" AND valid body, THEN rejects.', async () => {
       const e = new Error('test')
-      const successJqPromise = { done: (cb: () => void) => { cb(); return successJqPromise }, fail: (cb: () => void) => successJqPromise }
-      const failingJqPromise = { done: (cb: () => void) => failingJqPromise, fail: (cb: (e: Error) => void) => { cb(e); return failingJqPromise } };
+      const successJqPromise = { done: (cb: () => void) => { cb(); return successJqPromise }, fail: (_cb: () => void) => successJqPromise }
+      const failingJqPromise = { done: (_cb: () => void) => failingJqPromise, fail: (cb: (e: Error) => void) => { cb(e); return failingJqPromise } };
       (OCA.Files.App.fileList.filesClient.putFileContents as jest.Mock).mockReturnValueOnce(successJqPromise);
       (OCA.Files.App.fileList.addAndFetchFileInfo as jest.Mock).mockReturnValueOnce(failingJqPromise)
       const body = new Uint8Array()
@@ -221,7 +221,7 @@ describe('OcaService', () => {
 
     it('GIVEN unsuccessful put, WHEN putFileContents is called with path = "/test.pdf" AND valid body, THEN rejects.', async () => {
       const e = new Error('test')
-      const failingJqPromise = { done: (cb: () => void) => failingJqPromise, fail: (cb: (e: Error) => void) => { cb(e); return failingJqPromise } };
+      const failingJqPromise = { done: (_cb: () => void) => failingJqPromise, fail: (cb: (e: Error) => void) => { cb(e); return failingJqPromise } };
       (OCA.Files.App.fileList.filesClient.putFileContents as jest.Mock).mockReturnValueOnce(failingJqPromise)
       const body = new Uint8Array()
 
@@ -234,7 +234,7 @@ describe('OcaService', () => {
 
     it('GIVEN unsuccessful put that rejects with 412, WHEN putFileContents is called with path = "/test.pdf" AND valid body, THEN rejects with special message.', async () => {
       const e = 412
-      const failingJqPromise = { done: (cb: () => void) => failingJqPromise, fail: (cb: (e: number) => void) => { cb(e); return failingJqPromise } };
+      const failingJqPromise = { done: (_cb: () => void) => failingJqPromise, fail: (cb: (e: number) => void) => { cb(e); return failingJqPromise } };
       (OCA.Files.App.fileList.filesClient.putFileContents as jest.Mock).mockReturnValueOnce(failingJqPromise)
       const body = new Uint8Array()
 
@@ -248,7 +248,7 @@ describe('OcaService', () => {
 
   describe('deleteFile()', () => {
     it('GIVEN successful remove, WHEN deleteFile is called with filename = "test.pdf", THEN resolves and removes file.', async () => {
-      const successJqPromise = { done: (cb: () => void) => { cb(); return successJqPromise }, fail: (cb: () => void) => successJqPromise };
+      const successJqPromise = { done: (cb: () => void) => { cb(); return successJqPromise }, fail: (_cb: () => void) => successJqPromise };
       (OCA.Files.App.fileList.getCurrentDirectory as jest.Mock).mockReturnValueOnce('/');
       (OCA.Files.App.fileList.filesClient.remove as jest.Mock).mockReturnValueOnce(successJqPromise);
       (OCA.Files.App.fileList.remove as jest.Mock).mockImplementationOnce(() => {})
@@ -262,7 +262,7 @@ describe('OcaService', () => {
 
     it('GIVEN unsuccessful remove, WHEN deleteFile is called with filename = "test.pdf", THEN rejects.', async () => {
       const e = new Error('test')
-      const failingJqPromise = { done: (cb: () => void) => failingJqPromise, fail: (cb: (e: Error) => void) => { cb(e); return failingJqPromise } };
+      const failingJqPromise = { done: (_cb: () => void) => failingJqPromise, fail: (cb: (e: Error) => void) => { cb(e); return failingJqPromise } };
       (OCA.Files.App.fileList.getCurrentDirectory as jest.Mock).mockReturnValueOnce('/');
       (OCA.Files.App.fileList.filesClient.remove as jest.Mock).mockReturnValueOnce(failingJqPromise)
 

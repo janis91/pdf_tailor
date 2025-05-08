@@ -8,8 +8,8 @@ export class OcaService {
         altText: Translations.TRANSLATION_TAILOR,
         displayName: Translations.TRANSLATION_TAILOR,
         iconClass: 'icon-pdf-tailor',
-        mime: 'image',
-        name: 'Ocr',
+        mime: 'application/pdf',
+        name: 'Tailor',
         order: 100,
         permissions: OC.PERMISSION_UPDATE
       })
@@ -21,19 +21,19 @@ export class OcaService {
     }
 
     public registerMultiSelectMenuItem: (handler: () => void) => void = (handler) => {
-      const index = OCA.Files.App.fileList.multiSelectMenuItems.findIndex(i => i.name === 'ocr')
+      const index = OCA.Files.App.fileList.multiSelectMenuItems.findIndex(i => i.name === 'tailor')
       if (index !== -1) return
       OCA.Files.App.fileList.multiSelectMenuItems.push({
         action: handler,
         displayName: Translations.TRANSLATION_TAILOR,
         iconClass: 'icon-pdf-tailor',
-        name: 'ocr'
+        name: 'tailor'
       })
       OCA.Files.App.fileList.fileMultiSelectMenu.render(OCA.Files.App.fileList.multiSelectMenuItems)
     }
 
     public unregisterMultiSelectMenuItem: () => void = () => {
-      const index = OCA.Files.App.fileList.multiSelectMenuItems.findIndex(i => i.name === 'ocr')
+      const index = OCA.Files.App.fileList.multiSelectMenuItems.findIndex(i => i.name === 'tailor')
       if (index === -1) return
       OCA.Files.App.fileList.multiSelectMenuItems.splice(index, 1)
       OCA.Files.App.fileList.fileMultiSelectMenu.render(OCA.Files.App.fileList.multiSelectMenuItems)
